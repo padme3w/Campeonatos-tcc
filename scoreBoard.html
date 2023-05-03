@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Champs | Score Board</title>
+
+    <link rel="stylesheet" href="css/scoreBoard.css">
+</head>
+
+<body>
+  <section class="atleta_side">
+    <div class="a1">
+      <div class="atleta-name" data-player-name="a1">Atleta 1</div>
+        <div class="points-content">
+          <div class="point-content">
+            <div class="point-title">Montada <br> Pegada nas Costas</div>
+            <div class="point-value" data-point-mounted="a1">0</div>
+            <div class="point-controls">
+              <input type="button" onclick="a1.mountedDecrement()" value="-">
+              4
+              <input type="button" onclick="a1.mountedIncrement()" value="+">
+            </div>
+          </div>
+          
+          <div class="point-content">
+            <div class="point-title">Passagem de Guarda</div>
+            <div class="point-value" data-point-guard="a1">0</div>
+              <div class="point-controls">
+                <input type="button" onclick="a1.guardDecrement()" value="-">
+                3
+                <input type="button" onclick="a1.guardIncrement()" value="+">
+              </div>
+          </div>
+          
+          <div class="point-content">
+            <div class="point-title">Queda <br> Raspagem <br> Joelho na Barriga</div>
+            <div class="point-value" data-point-overthrow="a1">0</div>
+            <div class="point-controls">
+              <input type="button" onclick="a1.overthrowDecrement()"value="-">
+              2
+              <input type="button" onclick="a1.overthrowIncrement()" value="+">
+            </div>
+          </div>
+
+          <div class="two-point-content">
+
+            <div class="point-content">
+              <div class="point-title">Vantagem</div>
+              <div class="point-value" data-point-advantage="a1">0</div>
+              <div class="point-controls">
+              <input type="button" onclick="a1.advantageDecrement()" value="-">
+              <input type="button" onclick="a1.advantageIncrement()" value="+">
+              </div>
+            </div>
+            
+            <div class="point-content">
+            <div class="point-title">Punição</div>
+              <div class="point-value" data-point-punishment="a1">0</div>
+              <div class="point-controls">
+              <input type="button" onclick="a1.punishmentDecrement()" value="-">
+              <input type="button" onclick="a1.punishmentIncrement()" value="+">
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="a2">
+      <div class="atleta-name" data-player-name="a2">Atleta 2</div>
+        <div class="points-content">
+          <div class="point-content">
+            <div class="point-title">Montada <br> Pegada nas Costas</div>
+            <div class="point-value" data-point-mounted="a2">0</div>
+            <div class="point-controls">
+              <input type="button" onclick="a2.mountedDecrement()" value="-">
+              4
+              <input type="button" onclick="a2.mountedIncrement()" value="+">
+            </div>
+          </div>
+          
+          <div class="point-content">
+            <div class="point-title">Passagem de Guarda</div>
+            <div class="point-value" data-point-guard="a2">0</div>
+            <div class="point-controls">
+              <input type="button" onclick="a2.guardDecrement()" value="-">
+              3
+              <input type="button" onclick="a2.guardIncrement()" value="+">
+            </div>
+          </div>
+          
+          <div class="point-content">
+            <div class="point-title">Queda <br> Raspagem <br> Joelho na Barriga</div>
+            <div class="point-value" data-point-overthrow="a2">0</div>
+            <div class="point-controls">
+              <input type="button" onclick="a2.overthrowDecrement()"value="-">
+              2
+              <input type="button" onclick="a2.overthrowIncrement()" value="+">
+            </div>
+          </div>
+
+          <div class="two-point-content">
+            <div class="point-content">
+              <div class="point-title">Vantagem</div>
+              <div class="point-value" data-point-advantage="a2">0</div>
+              <div class="point-controls">
+                <input type="button" onclick="a1.advantageDecrement()" value="-">
+                <input type="button" onclick="a1.advantageIncrement()" value="+">
+              </div>
+            </div>
+            
+            <div class="point-content">
+              <div class="point-title">Punição</div>
+              <div class="point-value" data-point-punishment="a2">0</div>
+              <div class="point-controls">
+                <input type="button" onclick="a1.punishmentDecrement()" value="-">
+                <input type="button" onclick="a1.punishmentIncrement()" value="+">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <sidebar>
+    <div class="timer-content">
+      <div class="total-points" data-point-total="a1">0</div>
+      <div class="timer-display" data-show-timer>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        00:00
+      </div>
+      <div class="timer-controls">
+        <input type="button" data-timer-start value="Iniciar">
+        <input type="button" data-timer-reset value="Reiniciar">
+      </div>
+      <div class="total-points" data-point-total="a2">0</div>
+    </div>
+  </sidebar> 
+</body>
+
+
+</html>
