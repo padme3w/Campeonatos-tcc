@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Castoro+Titling&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Bruno Ace SC', cursive;
+    color: orangered;
+}
+
+body{
+    margin: 50px;
+    display: flex;
+}
+
+fieldset{
+    border: 1px solid orangered;
+    padding-right: 1000px;
+}
+
