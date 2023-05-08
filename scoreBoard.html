@@ -39,9 +39,9 @@
             <div class="point-title">Queda <br> Raspagem <br> Joelho na Barriga</div>
             <div class="point-value" data-point-overthrow="a1">0</div>
             <div class="point-controls">
-              <input type="button" onclick="a1.overthrowDecrement()"value="-">
+              <input type="button" onclick="a1.overthrowDecrement()"value="-" id="overthrowDecrementButton1">
               2
-              <input type="button" onclick="a1.overthrowIncrement()" value="+">
+              <input type="button" onclick="a1.overthrowIncrement()" value="+" id="overthrowIncrementButton1">
             </div>
           </div>
 
@@ -51,8 +51,8 @@
               <div class="point-title">Vantagem</div>
               <div class="point-value" data-point-advantage="a1">0</div>
               <div class="point-controls">
-              <input type="button" onclick="a1.advantageDecrement()" value="-">
-              <input type="button" onclick="a1.advantageIncrement()" value="+">
+              <input type="button" onclick="a1.advantageDecrement()" value="-" id="advantageDecrementButton1">
+              <input type="button" onclick="a1.advantageIncrement()" value="+" id="advantageIncrementButton1">
               </div>
             </div>
             
@@ -60,8 +60,8 @@
             <div class="point-title">Punição</div>
               <div class="point-value" data-point-punishment="a1">0</div>
               <div class="point-controls">
-              <input type="button" onclick="a1.punishmentDecrement()" value="-">
-              <input type="button" onclick="a1.punishmentIncrement()" value="+">
+              <input type="button" onclick="a1.punishmentDecrement()" value="-" id="punishmentDecrementButton1">
+              <input type="button" onclick="a1.punishmentIncrement()" value="+" id="punishmentIncrementButton1">
               </div>
             </div>
           </div>
@@ -85,9 +85,9 @@
             <div class="point-title">Passagem de Guarda</div>
             <div class="point-value" data-point-guard="a2">0</div>
             <div class="point-controls">
-              <input type="button" onclick="a2.guardDecrement()" value="-">
+              <input type="button" onclick="a2.guardDecrement()" value="-" id="guardDecrementButton2">
               3
-              <input type="button" onclick="a2.guardIncrement()" value="+">
+              <input type="button" onclick="a2.guardIncrement()" value="+" id="guardIncrementButton2">
             </div>
           </div>
           
@@ -95,9 +95,9 @@
             <div class="point-title">Queda <br> Raspagem <br> Joelho na Barriga</div>
             <div class="point-value" data-point-overthrow="a2">0</div>
             <div class="point-controls">
-              <input type="button" onclick="a2.overthrowDecrement()"value="-">
+              <input type="button" onclick="a2.overthrowDecrement()"value="-" id="overthrowDecrementButton2">
               2
-              <input type="button" onclick="a2.overthrowIncrement()" value="+">
+              <input type="button" onclick="a2.overthrowIncrement()" value="+" id="overthrowIncrementButton2">
             </div>
           </div>
 
@@ -106,8 +106,8 @@
               <div class="point-title">Vantagem</div>
               <div class="point-value" data-point-advantage="a2">0</div>
               <div class="point-controls">
-                <input type="button" onclick="a1.advantageDecrement()" value="-">
-                <input type="button" onclick="a1.advantageIncrement()" value="+" >
+                <input type="button" onclick="a1.advantageDecrement()" value="-" id="advantageDecrementButton2">
+                <input type="button" onclick="a1.advantageIncrement()" value="+" id="advantageIncrementButton2">
               </div>
             </div>
             
@@ -115,8 +115,8 @@
               <div class="point-title">Punição</div>
               <div class="point-value" data-point-punishment="a2">0</div>
               <div class="point-controls">
-                <input type="button" onclick="a1.punishmentDecrement()" value="-">
-                <input type="button" onclick="a1.punishmentIncrement()" value="+">
+                <input type="button" onclick="a1.punishmentDecrement()" value="-" id="punishmentDecrementButton2">
+                <input type="button" onclick="a1.punishmentIncrement()" value="+" id="punishmentIncrementButton2">
               </div>
             </div>
           </div>
@@ -144,6 +144,7 @@
 
   <script src="js/mountedFunctions.js"></script>
   <script src="js/guardDecrement.js"></script>
+  <script src="js/overthrowFunctions.js"></script>
 </body>
 
 
