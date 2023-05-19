@@ -10,43 +10,53 @@
 }
 
 body{
+    min-height: 100vh !important;
     display: flex;
     align-items: center;
+    border: 1px solid orangered;
 }
 
-.atleta_side{
-    height: 100%;
+.two-points{
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.atletas{
+    height: 90%;
     width: 60%;
 }
 
 .a1, .a2{
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
+    justify-content: space-around;
+    padding: 3%;
     border: solid 1px orangered;
-    box-shadow: 0 0 10px 0;
     width: 100%;
     height: 100%;
+    flex-direction: column;
+}
+
+.submission{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
 }
 
 section{
-    margin: 10px;
-    height: 90%;
+    height: 100%;
     width: 50%;
-    border: solid 1px orangered;
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
 
-.atleta-name {
-    display: flex;
-    justify-content: center;
-    margin: 10px;
-    font-size: 2rem;
+h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
 }
 
-.points-content{
+.points-title {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -55,29 +65,18 @@ section{
     font-size: 1rem;
 }
 
-.points-content div.point-content{
-    margin: 20px;
-    padding: 20px;
-}
-
 .point-value {
-    margin: 10px;
+    margin: 15px;
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.timer-content{
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .finalizacao{
     width: 150px;
-    height:20px;
+    height: 50px;
     text-align: center;
+    float: center;
 }
 
 input{
@@ -86,7 +85,6 @@ input{
     border: solid 0.5px orangered;
     padding: 10px;
     box-shadow: 0 0 10px 0;
-
 }
 
 input:hover{
@@ -97,102 +95,9 @@ input:hover{
     border-radius: 5px;
 }
 
-sidebar{
-    position: relative;
-    margin: 5% 5%;
-    height: 80%;
-    width: 60%;
-    display: block;
+.timer{
+    display: flex;
     justify-content: center;
-    float: right;
-    font-size: 5rem;
-    transition: .5s;
-    overflow: hidden;
-    
+    align-items: center;
+    font-size: 8rem;
 }
-
-sidebar span{
-    position: absolute;
-    display: block;
-}
-
-sidebar span:nth-child(1){
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, transparent, orangered);
-    animation:  sidebar1 1s linear infinite;
-    box-shadow: 0 0 10px 0;
-}
-@keyframes  sidebar1{
-    0%{
-        left: -100%;
-    }
-    50%,
-    100%{
-        left: 100%;
-    }
-}
-
-sidebar span:nth-child(2){
-    top: -100%;
-    right: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, orangered);
-    animation:  sidebar2 1s linear infinite;
-    animation-delay: .20s;
-    box-shadow: 0 0 10px 0;
-}
-@keyframes sidebar2{
-    0%{
-        top: -100%;
-    }
-    50%,
-    100%{
-        top: 100%;
-    }
-}
-
-sidebar span:nth-child(3){
-    bottom: 0;
-    right: -100%;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(270deg, transparent, orangered);
-    animation:  sidebar3 1s linear infinite;
-    animation-delay: .45s;
-    box-shadow: 0 0 10px 0;
-}
-@keyframes sidebar3{
-    0%{
-        right: -100%;
-    }
-    50%,
-    100%{
-        right: 100%;
-    }
-}
-
-sidebar span:nth-child(4){
-    bottom: -100%;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, orangered);
-    animation:  sidebar4 1s linear infinite;
-    animation-delay: .70s;
-    box-shadow: 0 0 10px 0;
-}
-@keyframes sidebar4 {
-    0%{
-        bottom: -100%;
-    }
-    50%,
-    100%{
-        bottom: 100%;
-    }
-}
-
-
