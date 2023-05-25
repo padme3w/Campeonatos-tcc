@@ -29,7 +29,7 @@
                 <br>
 
                 <div class="inputBox">
-                    <label for="data">Data de nascimento:</label>
+                    <label for="data">Data de nascimento</label>
                     <input type="date" name="data" id="data" class="user" required>
                 </div>
                 <br>
@@ -37,12 +37,6 @@
                 <div class="inputBox">
                     <label for="email">Email</label>
                     <input type="email" name="email" id="email" class="user" required>
-                </div>
-                <br>
-
-                <div class="inputBox">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" class="user" required>
                 </div>
                 <br>
 
@@ -87,11 +81,20 @@
 
                 <p>GI ou NO-GI?</p>
 
-                <input type="radio" name="ginogi" id="gi" value="gi" required>
+                <input type="radio" name="kimono" id="gi" value="gi" required>
                 <label for="gi">GI</label>
 
-                <input type="radio" name="ginogi" id="nogi" value="nogi" required>
+                <input type="radio" name="kimono" id="nogi" value="nogi" required>
                 <label for="nogi">NO-GI</label>
+                <br> <br>
+
+                <p>Inscrição em absoluto</p>
+
+                <input type="radio" name="absoluto" id="sim" value="sim" required>
+                <label for="sim">Sim</label>
+
+                <input type="radio" name="absoluto" id="nao" value="nao" required>
+                <label for="nao">Não</label>
                 <br> <br>
 
                 <div class="inputBox">
@@ -108,8 +111,8 @@
                 <br>
 
                 <div class="inputBox">
-                    <select type="text" id="peso"  required>
-                        <option value="">Peso</option>
+                    <select type="text" id="categoria"  required>
+                        <option value="">Categoria</option>
                         <option value="branca">Galo</option>
                         <option value="colorida">Pluma</option>
                         <option value="azul">Pena</option>
@@ -119,21 +122,20 @@
                         <option value="preta">Pesado</option>
                         <option value="preta">Super-pesado</option>
                         <option value="preta">Pesadíssimo</option>
-                        <option value="preta">Absoluto</option>
                     </select>
                 </div> 
                 <br>
 
                 <div class="inputBox">
                     <select type="text" id="equipe"  required>
-                        <option value="">Equipe / Academia</option> 
+                        <option value="">Equipe</option> 
                     </select>
                 </div> 
                 <br>
 
                 <div class="inputBox">
                     <select type="text" id="professor"  required>
-                        <option value="">Professor</option> 
+                        <option value="">Academia / Professor</option> 
                     </select>
                 </div> 
                 <br>
