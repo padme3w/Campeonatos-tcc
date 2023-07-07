@@ -3,7 +3,7 @@ const overthrowIncrementButton1 = document.querySelector('#overthrowIncrementBut
 const overthrowDecrementButton2 = document.querySelector('#overthrowDecrementButton2');
 const overthrowIncrementButton2 = document.querySelector('#overthrowIncrementButton2');
 const quedaPoints1 = document.querySelector('#quedaPoints1');
-const quedaPoints2 = document.querySelector('#quedaPoinst2');
+const quedaPoints2 = document.querySelector('#quedaPoints2');
 
 function overthrowDecrement1(){
     console.log('decrement');

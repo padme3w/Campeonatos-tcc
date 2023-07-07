@@ -5,81 +5,84 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
-body{
-    display: flex;
-    flex-direction: column;
+body {
     background-color: rgb(14, 13, 13);
 }
 
 header {
-    padding: 20px 50px;
+    padding: 20px;
     width: 100vw;
     height: 70px;
-    display: flex;
+    position: fixed;
     background-color: rgb(27, 26, 26);
     border-bottom: 1px solid orangered;
-    color: black;
-    align-items: center;
-}
-
-label{
+    align-content: center;
     color: wheat;
-    height: 30px;
-    margin: 10px;
 }
 
-select {
-    margin-top: 5px;
-    padding: 5px;
-    color: wheat;
-    background-color: rgb(27, 26, 26);
-}
-
-form {
-    border: 1px solid orangered;
-    margin: 30px 450px;;
-    width: 550px;
-    height: 550px;
-    padding: 30px;
+main {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    background-color: rgb(27, 26, 26);
-    border-radius: 5px;
-    box-shadow: 0 0 10px 0;
-    align-items: center;
-    top: 50%;
-    left: 50%;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    height: 100vh !important;
 }
 
+h2 {
+    color: orangered;
+}
 
-input{
+p {
     color: wheat;
-    border: none;
-    border-bottom: 1px solid wheat;
-    width: 300px;
-    height: 30px;
-    background-color: rgb(27, 26, 26);
+    font-size: 1rem;
+    padding-top: 5px;
 }
 
 
+.event {
+    background-color: rgb(27, 26, 26);
+    margin: 80px;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid orangered;
+}
 
-.button {
-    margin: 0;
-    height: auto;
-    background: rgb(27, 26, 26);
-    padding: 0;
-    border: none;
-  }
-
-  a {
+a {
     color: wheat;
     font-size: 1rem;
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
+
+.info {
+    margin-right: 60px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    margin-top: 100px;
+}
+
+img {
+    margin: 10px;
+    width: 300px;
+    height: 400px;
+    border-radius: 5px;
+}
+    
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
   
   .button {
     --border-right: 6px;
@@ -94,9 +97,6 @@ input{
     text-transform: uppercase;
     color: transparent;
     -webkit-text-stroke: 1px var(--text-stroke-color);
-  }
-  .actual-text {
-    color: wheat;
   }
   
   .hover-text {
@@ -117,8 +117,8 @@ input{
     filter: drop-shadow(0 0 23px var(--animation-color))
   }
 
-
-.save {
+  
+.more {
     display: inline-block;
     border-radius: 4px;
     background-color: orangered;
@@ -128,20 +128,20 @@ input{
     font-size: 16px;
     padding: 10px;
     width: 130px;
-    height: 40px;
+    height: 60px;
     transition: all 0.5s;
     cursor: pointer;
-    margin-left: 300px;
+    margin-top: 15px;
    }
    
-   .save span {
+   .more span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
    }
    
-   .save span:after {
+   .more span:after {
     content: '»';
     position: absolute;
     opacity: 0;
@@ -150,11 +150,14 @@ input{
     transition: 0.5s;
    }
    
-   .save:hover span {
+   .more:hover span {
     padding-right: 15px;
    }
    
-   .save:hover span:after {
+   .more:hover span:after {
     opacity: 1;
     right: 0;
    }
+   
+  
+  

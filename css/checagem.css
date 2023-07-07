@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@300&display=swap');
+
+* {
+    font-family: 'Lexend Peta', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(14, 13, 13);
+  color: wheat;
+  width: 100vw !important;
+}
+
+select {
+  background-color: rgb(14, 13, 13);
+  color: wheat;
+  padding: 10px;
+}
+
+.selects {
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoe {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+table {
+    border-top: 1px solid orangered;
+    margin: 20px 0 ;
+    padding: 15px;
+    width: 100vw;
+    align-content: center;
+}
+
+.dados {
+    border-bottom: 2px solid orangered;
+}
+
+header {
+    padding: 20px;
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+    background-color: rgb(27, 26, 26);
+    border-bottom: 1px solid orangered;
+    align-content: center;
+}
+
+a {
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+  }
+  
+  .button {
+    --border-right: 6px;
+    --text-stroke-color: black;
+    --animation-color: orangered;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px var(--text-stroke-color);
+  }
+  .actual-text {
+    color: wheat;
+  }
+  
+  .hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    content: attr(data-text);
+    color: var(--animation-color);
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 1px var(--animation-color);
+  }
+
+  .button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(0 0 23px var(--animation-color))
+  }
+
+
+  .botoes {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: orangered;
+  border: none;
+  color: wheat;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.botoes span {
+ cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+
+.botoes span:after {
+ content: '»';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -15px;
+ transition: 0.5s;
+}
+
+.botoes:hover span {
+ padding-right: 15px;
+}
+
+.botoes:hover span:after {
+ opacity: 1;
+ right: 0;
+}
