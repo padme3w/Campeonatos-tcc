@@ -45,11 +45,6 @@
             <a href="https://cbjj.com.br/books-videos"><span class="actual-text">&nbsp;Regras&nbsp;</span></a>
             <a href="https://cbjj.com.br/books-videos"><span class="hover-text" aria-hidden="true">&nbsp;Regras&nbsp;</span></a>
         </button>
-        
-        <button data-text="Awesome" class="button">
-            <a href="login.html"><span class="actual-text">&nbsp;Login&nbsp;</span></a>
-            <a href="login.html"><span class="hover-text" aria-hidden="true">&nbsp;Login&nbsp;</span></a>
-        </button>
 
     </header>
 
@@ -84,13 +79,13 @@
         <b>Graduação:</b>  
         <select name="graduacao" id="">
             <option value=""></option>
-            <option value="branca">Branca</option>
-            <option value="cinza">Cinza</option>
-            <option value="colorida">Amarela/Laranja/Verde</option>
-            <option value="azul">Azul</option>
-            <option value="roxa">Roxa</option>
-            <option value="marrom">Marrom</option>
-            <option value="preta">Preta</option>
+            <option value="Branca">Branca</option>
+            <option value="Cinza">Cinza</option>
+            <option value="Colorida">Colorida</option>
+            <option value="Azul">Azul</option>
+            <option value="Roxa">Roxa</option>
+            <option value="Marrom">Marrom</option>
+            <option value="Preta">Preta</option>
         </select>
     </label>
 
@@ -98,8 +93,8 @@
         <b>Gênero:</b>  
         <select name="genero" id="">
             <option value=""></option>
-            <option value="feminino">Feminino</option>
-            <option value="masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Masculino">Masculino</option>
         </select>
     </label>
 
@@ -107,13 +102,13 @@
         <b>Idade:</b> 
         <select name="idade" id="">
             <option value=""></option>
-            <option value="pre-mirim">Pré-mirim</option>
-            <option value="mirim">Mirim</option>
-            <option value="infantil">Infantil</option>
-            <option value="infanto-juvenil">Infanto-juvenil</option>
-            <option value="juvenil">Juvenil</option>
-            <option value="adulto">Adulto</option>
-            <option value="master">Master</option>
+            <option value="Pré-mirim">Pré-mirim</option>
+            <option value="Mirim">Mirim</option>
+            <option value="Infantil">Infantil</option>
+            <option value="Infanto-juvenil">Infanto-juvenil</option>
+            <option value="Juvenil">Juvenil</option>
+            <option value="Adulto">Adulto</option>
+            <option value="Master">Master</option>
         </select> 
     </label>
 
@@ -121,15 +116,15 @@
         <b>Peso:</b>
         <select name="peso" id="">
             <option value=""></option>
-            <option value="galo">Galo</option>
-            <option value="pluma">Pluma</option>
-            <option value="pena">Pena</option>
-            <option value="leve">Leve</option>
-            <option value="medio">Médio</option>
-            <option value="meio-pesado">Meio-pesado</option>
-            <option value="pesado">Pesado</option>
-            <option value="super-pesado">Super-pesado</option>
-            <option value="pesadissimo">Pesadíssimo</option>
+            <option value="Galo">Galo</option>
+            <option value="Pluma">Pluma</option>
+            <option value="Pena">Pena</option>
+            <option value="Leve">Leve</option>
+            <option value="Médio">Médio</option>
+            <option value="Meio-pesado">Meio-pesado</option>
+            <option value="Pesado">Pesado</option>
+            <option value="Super-pesado">Super-pesado</option>
+            <option value="Pesadissimo">Pesadíssimo</option>
         </select>
     </label>
 

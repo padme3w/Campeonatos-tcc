@@ -1,51 +1,28 @@
-<?php
+<?php 
 
-include_once('config.php');
+    include_once('config.php');
 
-if (!empty($_GET['search'])) {
-
-    $data = $_GET['search'];
-    $sql = "SELECT nome, equipe FROM inscritos";
-    if ($graduacao != null && $genero != null && $idade != null && $peso != null) {
-        $sql.=  " WHERE graduacao = :graduacao AND genero = :genero AND idade = :idade AND peso = :peso";
-    } 
-
-    $stmt = $conexao->prepare($sql);
-        if ($stmt == false){
-            $conexao->showError($sql);
-        }
-        if ($graduacao == null && $genero == null && $idade == null && $peso == null) {
-            $stmt->execute([]);
-        } else {
-            $stmt->execute([':graduacao' -> $graduacao && ':genero' -> $genero && ':idade' -> $idade && ':peso' -> $peso]);
-        }
+    
+    if(isset($_POST['graduacao']) && isset($_POST['genero']) && isset($_POST['idade']) && isset($_POST['peso'])) {
+        // Obtém os valores dos campos do formulário
+        $graduacao = $_POST['graduacao'];
+        $genero = $_POST['genero'];
+        $idade = $_POST['idade'];
+        $peso = $_POST['peso'];
+    
+        // Prepara a consulta SQL
+        $sql = "SELECT nome, equipe FROM inscritos WHERE graduacao = '$graduacao' AND genero = '$genero' AND idade = '$idade' AND peso = '$peso'";
+    
+        // Executa a consulta no banco de dados
+        $result = $conexao->query($sql);
+    
+        // Verifica se a consulta retornou algum resultado
         
-        $list = [];
-
-        while ($user_data = $result->fetch_assoc()) {
-            array_push($list,$user_data);
-        }
-
-        return $list;
-
-    $stmt = $conexao->prepare($sql);
-
-    if (!empty($_GET['graduacao']) && !empty($_GET['genero']) && !empty($_GET['idade']) && !empty($_GET['peso'])) {
-        $graduacao = $_GET['graduacao'];
-        $genero = $_GET['genero'];
-        $idade = $_GET['idade'];
-        $peso = $_GET['peso'];
-
-        $stmt->bind_param("ssss", $graduacao, $genero, $idade, $peso);
+    
+        // Fecha a conexão com o banco de dados
+        $conexao->close();
     }
-} else {
-    $sql = "SELECT nome, equipe FROM inscritos ORDER BY id DESC";
-    $stmt = $conexao->prepare($sql);
-}
-
-$stmt->execute();
-$result = $stmt->get_result();
-
+    
 ?>
 
 <!DOCTYPE html>
@@ -75,89 +52,65 @@ $result = $stmt->get_result();
         </button>
     </header>
 
-    <form method='GET' action='search'>
+    <form method='POST' action= "">
         <div class="selects">
-            <label class='cat'>
+            <label class='cat' for="graduacao">
                 <b>Graduação</b>
-                <select name="graduacao" id="graduacao">
-                    <?php
-                    foreach($graduacao as $user_data){
-                        _v($_GET,"graduacao") == $user_data['graduacao'] ? $selected='selected' : $selected='';
-                        print "<option value='{$user_data['graduacao']}' $selected>{$user_data['graduacao']}</option>";
-                    }
-                    ?>
-                    <!--<option value=""></option>
-                    <option value="branca">Branca</option>
-                    <option value="cinza">Cinza</option>
-                    <option value="colorida">Amarela/Laranja/Verde</option>
-                    <option value="azul">Azul</option>
-                    <option value="roxa">Roxa</option>
-                    <option value="marrom">Marrom</option>
-                    <option value="preta">Preta</option>-->
-                </select>
-            </label>
-
-            <label class='cat'>
-                <b>Gênero</b>
-                <select name="genero" id="genero">
-                    <?php
-                    foreach($genero as $user_data){
-                        _v($_GET,"genero") == $user_data['genero'] ? $selected='selected' : $selected='';
-                        print "<option value='{$user_data['genero']}' $selected>{$user_data['genero']}</option>";
-                    }
-                    ?>
-                    <!--<option value=""></option>
-                    <option value="feminino">Feminino</option>
-                    <option value="masculino">Masculino</option>-->
-                </select>
-            </label>
-
-            <label class='cat'>
-                <b>Idade</b>
-                <select name="idade" id="idade">
-                    <?php
-                    foreach($idade as $user_data){
-                        _v($_GET,"idade") == $user_data['idade'] ? $selected='selected' : $selected='';
-                        print "<option value='{$user_data['idade']}' $selected>{$user_data['idade']}</option>";
-                    }
-                    ?>
-                    <!--<option value=""></option>
-                    <option value="pre-mirim">Pré-mirim</option>
-                    <option value="mirim">Mirim</option>
-                    <option value="infantil">Infantil</option>
-                    <option value="infanto-juvenil">Infanto-juvenil</option>
-                    <option value="juvenil">Juvenil</option>
-                    <option value="adulto">Adulto</option>
-                    <option value="master">Master</option>-->
-                </select>
-            </label>
-
-            <label class='cat'>
-                <b>Peso</b>
-                <select name="peso" id="peso">
+                <select name="graduacao">
                     <option value=""></option>
-                    <?php
-                    foreach($peso as $user_data){
-                        _v($_GET,"peso") == $user_data['peso'] ? $selected='selected' : $selected='';
-                        print "<option value='{$user_data['peso']}' $selected>{$user_data['peso']}</option>";
-                    }
-                    ?>
-                    <!--<option value=""></option>
-                    <option value="galo">Galo</option>
-                    <option value="pluma">Pluma</option>
-                    <option value="pena">Pena</option>
-                    <option value="leve">Leve</option>
-                    <option value="medio">Médio</option>
-                    <option value="meio-pesado">Meio-pesado</option>
-                    <option value="pesado">Pesado</option>
-                    <option value="super-pesado">Super-pesado</option>
-                    <option value="pesadissimo">Pesadíssimo</option>-->
+                    <option value="Branca">Branca</option>
+                    <option value="Cinza">Cinza</option>
+                    <option value="Colorida">Colorida</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Roxa">Roxa</option>
+                    <option value="Marrom">Marrom</option>
+                    <option value="Preta">Preta</option>
+                </select>
+            </label>
+
+            <label class='cat' for="genero">
+                <b>Gênero</b>
+                <select name="genero">
+                    <option value=""></option>
+                    <option value="Feminino">Feminino</option>
+                    <option value="Masculino">Masculino</option>
+                </select>
+            </label>
+
+            <label class='cat' for="idade">
+                <b>Idade</b>
+                <select name="idade">
+                    <option value=""></option>
+                    <option value="Pré-mirim">Pré-mirim</option>
+                    <option value="Mirim">Mirim</option>
+                    <option value="Infantil">Infantil</option>
+                    <option value="Infanto-juvenil">Infanto-juvenil</option>
+                    <option value="Juvenil">Juvenil</option>
+                    <option value="Adulto">Adulto</option>
+                    <option value="Master">Master</option>
+                </select>
+            </label>
+
+            <label class='cat' for="peso">
+                <b>Peso</b>
+                <select name="peso">
+                    <option value=""></option>
+                    <option value="Galo">Galo</option>
+                    <option value="Pluma">Pluma</option>
+                    <option value="Pena">Pena</option>
+                    <option value="Leve">Leve</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Meio-pesado">Meio-pesado</option>
+                    <option value="Pesado">Pesado</option>
+                    <option value="Super-pesado">Super-pesado</option>
+                    <option value="Pesadissimo">Pesadíssimo</option>
                 </select>
             </label>
         </div>
 
         <div class="botoe" >
-            <button type="submit" class='btn-search botoes'>Buscar</button>
+            <button type="submit" class='btn-search botoes'>Checagem</button>
+            <button type="submit" class='btn-search botoes'>Chave</button>
         </div>
     </form>
 
@@ -168,14 +121,20 @@ $result = $stmt->get_result();
         </tr>
 
         <?php
+        if (!isset($result)) {
+            $result = null;
+        }
 
-            while ($user_data = $result->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>".$user_data['nome']."</td>";
-                echo "<td>".$user_data['equipe']."</td>";
-                echo "</tr>";
+        if ($result !== null && $result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                print("<tr>
+                        <td>" . $row['nome'] . "</td>
+                        <td>" . $row['equipe'] . "</td>
+                    </tr>");
             }
-            
+        } else {
+            print("");
+        }
         ?>
     </table>
 </body>
