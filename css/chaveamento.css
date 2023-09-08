@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Castoro+Titling&display=swap');
+
+html{
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bruno Ace SC', cursive;
+    background-color: #0b0b0c;
+}
+
+body {
+    height: 100% !important;
+}
+
+.f_centro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 4fr 2fr 4fr;
+    width: 100%;
+    height: 100%;
+}
+
+section {
+    padding: 10px;
+}
+
+img {
+    width: 40px;
+    height: 30px;
+}
+
+.Direita {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 100%;
+
+}
+
+.atleta-div{
+    background-color: rgb(29, 29, 34);
+    color: wheat;
+    padding: 12px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.q-div{
+    gap: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Esquerda {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100%;
+}
+
+.q-final{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 18px;
+}
+
+.s-final{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+}
+
+.s-final section{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 280px;
+    justify-content: center;
+}
+
+.q-final section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    gap: 18px;
+}
+
+.q-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.s-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.v-div{
+    width: 100%;
+}
+
+.ganhador {
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.quemganhou{
+    top: 35%;
+    left: 50% (-50%);
+    position: absolute;
+}
+
+.vencedor-div {
+    border-radius: 12px;
+    padding: 12px;
+    width: 100%;
+    display: flex;
+    gap: 6px;
+}

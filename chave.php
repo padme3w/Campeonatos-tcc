@@ -50,10 +50,8 @@ if (isset($_POST['graduacao']) && isset($_POST['genero']) && isset($_POST['idade
     // Criação do chaveamento
     $chaveamento = criarChaveamento($atletas);
 
-    // Exibição do chaveamento em uma tabela HTML
-    print ('<html>
-    <body>
-        <h1>Chave: ' . $graduacao . '-' . $genero . '-' . $idade . '-' . $peso .'</h1>');
+    // Exibição do nome da categoria na página
+    print ('<h1>Chave: ' . $graduacao . '-' . $genero . '-' . $idade . '-' . $peso .'</h1>');
 
     // Fechando a conexão com o banco de dados
     $conexao->close();
@@ -132,112 +130,11 @@ if (isset($_POST['graduacao']) && isset($_POST['genero']) && isset($_POST['idade
     <?php
 
     foreach ($chaveamento as $chave) {
-        echo $chave['participante1'] . '<hr>';
-        echo $chave['participante2'] . '<hr>';
+        echo '<div>' . $chave['participante1'] . '<div>';
+        echo '<div>' . $chave['participante2'] . '<div>';
     }
 
     ?>
 
-</body>
-</html>
-
-<!--DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chaveamento de Campeonato de Jiu-Jitsu</title>
-    <style>
-        /* Estilos CSS para a tabela do chaveamento */
-        table {
-            border-collapse: collapse;
-            width: 80%;
-            margin: 20px auto;
-        }
-
-        th, td {
-            border: 1px solid #dddddd;
-            padding: 8px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
-</head>
-<body>
-    <h1>Chaveamento de Campeonato de Jiu-Jitsu</h1>
-    <table>
-        <tr>
-            <th>Round 1</th>
-            <th>Round 2</th>
-            <th>Vencedor</th>
-        </tr>
-        <tr>
-            <td>Participante 1</td>
-            <td rowspan="2">Vencedor 1</td>
-            <td rowspan="4">Campeão</td>
-        </tr>
-        <tr>
-            <td>Participante 2</td>
-        </tr>
-        <tr>
-            <td>Participante 3</td>
-            <td rowspan="2">Vencedor 2</td>
-        </tr>
-        <tr>
-            <td>Participante 4</td>
-        </tr>
-        <tr>
-            <td>Participante 5</td>
-            <td rowspan="2">Vencedor 3</td>
-        </tr>
-        <tr>
-            <td>Participante 6</td>
-        </tr>
-        <tr>
-            <td>Participante 7</td>
-            <td rowspan="2">Vencedor 4</td>
-        </tr>
-        <tr>
-            <td>Participante 8</td>
-        </tr>
-    </table>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chave</title>
-
-    <link rel="stylesheet" href="css/chave.css">
-</head>
-<body>
-    <section class="ladoA">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-    </section>
-
-    <section class="ladoB">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-    </section>
 </body>
 </html>
