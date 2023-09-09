@@ -80,12 +80,11 @@ h2{
     float: center;
 }
 
-input{
+input, button{
     padding: 10px;
     border-radius: 5px;
     border: solid 0.5px orangered;
     padding: 10px;
-    box-shadow: 0 0 10px 0;
 }
 
 input:hover{

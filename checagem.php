@@ -110,7 +110,6 @@
 
         <div class="botoe" >
             <button type="submit" class='btn-search botoes'>Checagem</button>
-            <button type="submit" class='btn-search botoes'>Chave</button>
         </div>
     </form>
 

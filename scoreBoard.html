@@ -108,15 +108,14 @@
 
     <section class="timer">
       <div class="total-points" data-point-total="a1" id="player1TotalPoints"> 0 </div>
-      <div class="timer-display">
-        00:00
-      </div>
-      <div class="timer-controls">
-        <input type="button" data-timer-start value="Iniciar/Pausar">
-        <input type="button" data-timer-reset value="Fim da disputa">
+      <input type="number" id="minutes" name="minutes" min="1" step="1" value="1">
+      <div id="timer">00:00</div>  
+      <div class="timer-control">
+        <button type="button" onclick="startTimer(document.getElementById('minutes').value);">Iniciar</button>
+        <button type="button" onclick="togglePause();">Pausar/Continuar</button>
       </div>
       <div class="total-points" data-point-total="a2" id="player2TotalPoints"> 0 </div>
-    </section> 
+    </section>
 
   <script src="js/mountedFunctions.js"></script>
   <script src="js/guardDecrement.js"></script>
@@ -124,6 +123,7 @@
   <script src="js/advantageFunctions.js"></script>
   <script src="js/punishmentFunctions.js"></script>
   <script src="js/finalizacao.js"></script>
+  <script src="js/timer.js"></script>
 </body>
 
 
